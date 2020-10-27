@@ -1,0 +1,162 @@
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+html{
+	font-size: 9.259259259259261vw;
+}
+
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+body{
+	font-family:Helvetica;
+	max-width: 750px;
+	margin: 0 auto;
+	font-size: 12px;
+}
+
+@media screen and (min-width:750px){
+    /**
+      到达零界点时，屏幕宽度为750px,换成vw为 1vw = 750/100 = 7.5px,此时根节点的字体大小为 9.259259259259261vw，
+      如果想让超出临界点的尺寸固定，则实际尺寸为9.259259259259261*7.5 = 69.445px
+    */
+    html{
+        font-size: 69.445px ;
+    }
+}
+
+#header{
+    height: calc(176px / 3);
+    background: #46ae00;
+    font-size: 0;
+}
+
+#header h1 img{
+    width: calc(517px / 3);
+}
+
+/* .bar{
+    font-size: 0;
+} */
+
+.bar a{
+    display: inline-block;
+    height: calc(176px / 3);
+    margin-right: 0.3rem;
+}
+.bar a:nth-child(1){
+    width: calc(80px / 3);
+    background: url(../images/ico_01.png) no-repeat center;
+    background-size: 100%;
+}
+
+.bar a:nth-child(2){
+    width: calc(85px / 3);
+    background: url(../images/ico_02.png) no-repeat center;
+    background-size: 100%;
+}
+
+#banner{
+    height: 5.40rem; /*高度不固定，使用rem */
+    position: relative;
+}
+
+#banner .moveWrap img{
+    width: 100%;
+}
+
+.control{
+    position: absolute;
+    bottom: 0.34rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+}
+
+.control span{
+    display: inline-block;
+    width: 0.24rem;
+    height: 0.24rem;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 0.08rem;
+}
+
+.control .active{
+    background: #46ae00;
+}
+
+#nav{
+    padding: 0.5rem 0;
+}
+
+#nav a{
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+#nav a img{
+    width: 1.8rem;
+    height: 1.8rem;
+    display: block;
+    margin: 0 auto 0.16rem auto;
+}
+#nav a span{
+    font-size: 0.4rem;
+    color: #666;
+}
+
+#ad img{
+    width: 100%;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    background: #f5f5f5;
+    padding: 0.2rem;
+    padding-bottom: 0;
+}
+
+.pb{
+    padding-bottom: 0.2rem;
+}
+
+.item div img{
+    width: 4.5rem;
+    height: 6.4rem;
+}
+
+.item div.coloum{
+    display: flex;
+    width: 5.70rem;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.item div.coloum img{
+    width: 5.6rem;
+    height: 3.1rem;
+}
+
+#footer{
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    margin-top: 0.2rem;
+    box-shadow: 0 -0.06rem 0.06rem #dcdcdc;
+}
+
+#footer img{
+    width: calc(160px / 3);
+}
